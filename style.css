@@ -1,0 +1,320 @@
+/* === ESTILOS GENERALES === */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+/* === ESTILOS HEADER === */
+.container_principalHeader{
+  width: 100vw;
+  height: 8vh;
+  background-color: #1e3f72; 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* sadsadsa */
+.container_contentHeader{
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem;
+}
+
+.header_inputSearch{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1vh;
+}
+
+.inputHeader{
+  border-radius: 0.4rem;
+  border: none;
+  padding: 0.4rem;
+  outline: none;
+  font-size: 2vh;
+  height: 2vh;
+  width: 20vw;
+}
+
+/* Botón "Buscar" */
+.header_buttonSearch{
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 0.4rem;
+  padding: 0.4rem;
+  width: 8vw;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: 0.5s ease;
+}
+
+/* Para las animaciones del botón de búsqueda */
+.header_buttonSearch:hover{
+  cursor: pointer;
+  background-color: #4c78ba;
+}
+
+/* Botón "Agregar producto" */
+.header_buttonAdd{
+  width: 15vw;
+  border-radius: 0.4rem; 
+  padding: 0.4rem;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+}
+
+/* Para las animaciones del botón de agregar producto */
+.header_buttonAdd:hover{
+  cursor: pointer;
+  background-color: #4c78ba;
+}
+
+/* === ESTILOS MAIN === */
+.container_view{
+  display: grid;
+  /* tamaño de las columnas */
+  grid-template-columns: 0.2fr 0.8fr;
+}
+
+.list_Aside_Main{
+  background-color: lightblue;
+  /* Como en ".container_principalHeader" pusimos height: 8vh, aquí
+  tenemos que colocar lo que falte para llegar a 100 */
+  height: 92vh;
+}
+
+/* === Estilos Store === */
+.store_Main{
+  max-height: 92vh;
+  overflow-y: auto;
+  background-color: aliceblue;
+  /* Como en ".container_principalHeader" pusimos height: 8vh, aquí
+  tenemos que colocar lo que falte para llegar a 100 */
+  width: 100%;
+}
+
+.sectionStore{
+  background-color: white;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.containerTitleSection{
+  margin: 1rem;
+  font-size: 3vh;
+  border-bottom: 1px solid black;
+}
+
+
+.containerProductStore{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 0.6fr);
+  gap: 2vh;
+}
+
+.containerTargetItem{
+  width: 20vw;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.4rem;
+  box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 0.4rem;
+  transition: 0.2s ease;   
+}
+
+.containerTargetItem:hover{
+  cursor: pointer;
+  transform: scale(1.08);
+
+
+}
+
+.containerTargetItem h2{
+  font-size: 2vh;
+  text-align: center;
+
+} 
+
+.targetProps{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+}
+
+
+.sectionStore img{
+  width: 100%;
+  border-radius: 0.4rem;
+  box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.3);  
+}
+
+/* === ESTILO LIST ASIDE MAIN === */
+.list_Aside_Main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Título H2 dentro de aside */
+.list_Aside_Main h2{
+  margin-top: 3vh;
+  display: flex;
+  font-size: 4vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Lista general dentro de aside */
+.list_Aside_Main ul{
+  margin-top: 3vh;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 0.5vh;
+}
+
+/* Cada uno de los elementos de la lista dentro de aside */
+.list_Aside_Main ul li{
+  font-size: 2.5vh;
+  font-weight: 500;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+}
+
+.list_Aside_Main ul li:hover{
+  cursor: pointer;
+  background-color: #1e3f72;
+  color: white;
+
+}
+
+.liActive{
+  background-color: #1e3f72;
+  color: white;
+}
+
+/* === ESTILO POPUP === */
+.popUpContainer_Main{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(2px);
+}
+
+.popUpContainer{
+  width: 60vw;
+  height: 50vh;
+  background-color: aliceblue;
+  box-shadow: 5px 2px 10px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* align-items: center; */
+}
+
+.containerTitulo_PopUp{
+  width: 100%;
+  text-align: center;
+}
+
+/* Estilo de los inputs generales */
+.containerInputs_PopUp{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vh;
+}
+
+/* Estilo de cada uno de los inputs */
+.containerInputs_PopUp input, 
+.containerInputs_PopUp select{
+  width: 80%;
+  border: 1px solid grey;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+}
+
+.containerButtons_PopUp{
+  width: 100%;
+  display: flex;
+  justify-content: space-around; 
+}
+
+.buttonPopUp{
+  padding: 0.6rem;
+  border: 1px solid;
+  border-radius: 0.4rem;
+  font-size: 2.5vh;
+}
+
+.Aceptar{
+  background-color: lightgreen;
+}
+
+.Cancelar{
+  background-color: rgb(237, 237, 108);
+}
+
+.Eliminar{
+  background-color: lightcoral;
+}
+
+/* MEDIA QUERYS */
+
+@media screen and (min-width: 1280px) {
+  .containerProductStore{
+    grid-template-columns: repeat(4, 0.6fr);
+  }
+  
+  .containerTargetItem{
+    width: 15vw;
+  }
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{
+  width: 0.7rem;
+  background-color: white;
+  border-radius: 0.4rem;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #1e3f72;
+  border-radius: 0.4rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: #4c78ba;
+}
